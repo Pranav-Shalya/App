@@ -1,0 +1,123 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+         box-sizing: border-box;
+        }
+        
+        body{
+           
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        
+            
+        
+        .navbar{
+            overflow: hidden;
+            background-color: dimgray;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+        }
+        .navbar a{
+            text-decoration: none;
+            float:left;
+            padding: 10px 8px;
+            color: black;
+            display:block;
+            text-align: center;
+        }
+        .navbar a:hover{
+            color:white;
+            background-color: grey;
+        }
+        input[type=text],input[type=email],input[type=tel], select {
+           width: 100%;
+           padding: 12px 20px;
+           margin: 8px 0;
+           display: inline-block;
+           border: 1px solid #ccc;
+           border-radius: 8px;
+           box-sizing: border-box;
+        }
+        input[type=submit] {
+           width: 100%;
+           background-color: #4CAF50;
+           color: white;
+           padding: 14px 20px;
+           margin: 8px 0;
+           border: none;
+           border-radius: 10px;
+           cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .form {
+           border-radius: 5px;
+           background-color: #f2f2f2;
+           padding: 20px;
+           margin:40px 100px;
+        }
+        .heading{
+            color:black;
+            text-shadow: 0px 0px 3px red;
+             text-align: center;  
+        }
+       
+
+  
+    </style>
+</head>
+<body>
+    <div class="navbar"><a href="/index" target="_blank"  >Contact Me</a></div>
+    
+
+    <div class="new">
+    <h1 class="heading">Fill the form </h1>
+    <div class="form">
+        <form action="/action_page.php">
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="xyz@gmail.com..">
+        
+          <label for="phone">Phone no:</label>
+          <input type="tel" id="phone" name="phone" placeholder="999-999-9999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">China</option>
+            <option value="canada">India</option>
+            <option value="canada">Russia</option>
+            <option value="canada">Canada</option>
+            <option value="canada">United Kingdom</option>
+            <option value="canada">United States of America</option>
+            <option value="canada">Others</option>
+          </select>
+
+        
+        
+          <input type="submit" value="Submit" id="btn" >
+
+        </form>
+    </div>
+
+    </div>
+
+</body>
+</html>
