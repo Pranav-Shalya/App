@@ -1,38 +1,20 @@
-const express = require('express');
+const express= require('express');
 
-// express app
-const app= express();
 
-//listen for requests
-app.listen(3000);
+//express app
 
-app.get('/',(req,res)=>{
-   // res.send('<p>Home page</p>');
-   res.sendFile('./index.html',{root: __dirname});
-});
+const app = express();
+app.set('view engine','ejs');
 
-app.get('/about',(req,res)=>{
-   // res.send('<p>about page</p>');
-   res.sendFile('./about.html',{root: __dirname});
 
-});
+app.listen(2000);
 
-app.get('/achievement',(req,res)=>{
-   // res.send('<p>achievement page</p>');
-   res.sendFile('./achievement.html',{root: __dirname});
+app.get('/index', (req,res)=>{
+    res.render('index');
+
 });
 
 app.get('/404',(req,res)=>{
-    //res.send('<p>404 page</p>');
-    res.sendFile('./404.html',{root: __dirname});
+    res.render('404');
+
 });
-
-
-//redirects
-app.get('/about-us',(req,res)=>{
-    res.redirect('/about');
-})
-
-app.get('/project',(req,res)=>{
-    res.redirect('/achievement');
-})
